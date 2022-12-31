@@ -13,7 +13,7 @@
     <name>radar-query-sid</name>
     <description>radar-query-sid</description>
     <properties>
-        <java.version>17</java.version>
+        <java.version>1.8</java.version>
     </properties>
     <dependencies>
         <dependency>
@@ -37,8 +37,8 @@
         </dependency>
 
         <dependency>
-            <groupId>me.ubmagh</groupId>
-            <artifactId>common</artifactId>
+            <groupId>org.sid</groupId>
+            <artifactId>common-api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
