@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <packaging>pom</packaging>
-    <modules>
-        <module>common-api</module>
-        <module>radar-command-sid</module>
-    </modules>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -15,13 +10,17 @@
     </parent>
     <groupId>org.sid</groupId>
     <artifactId>sqrs-radar</artifactId>
+    <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
+    <modules>
+        <module>common-api</module>
+    </modules>
     <name>sqrs-radar</name>
     <description>sqrs-radar</description>
-        <properties>
-            <java.version>1.8</java.version>
-            <kotlin.version>1.5.30-M1</kotlin.version>
-        </properties>
+    <properties>
+        <java.version>1.8</java.version>
+        <kotlin.version>1.5.30-M1</kotlin.version>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -147,6 +146,7 @@
                     <jvmTarget>1.8</jvmTarget>
                 </configuration>
             </plugin>
-        </plugins>    </build>
+        </plugins>
+    </build>
 
 </project>
