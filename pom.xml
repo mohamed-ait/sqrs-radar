@@ -5,6 +5,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>common-api</module>
+        <module>radar-command-sid</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
