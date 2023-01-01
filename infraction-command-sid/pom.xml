@@ -35,7 +35,7 @@
     </dependencies>
 
     <build>
-        <plugins>
+        <plugins>v
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>

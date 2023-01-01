@@ -7,11 +7,11 @@
         <groupId>org.sid</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>me.ubmagh</groupId>
-    <artifactId>immatriculation-query-side</artifactId>
+    <groupId>org.sid</groupId>
+    <artifactId>infraction-query-side</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>immatriculation-query-side</name>
-    <description>immatriculation-query-side</description>
+    <name>infraction-query-side</name>
+    <description>infraction-query-side</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>

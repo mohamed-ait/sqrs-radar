@@ -3,9 +3,8 @@ package org.sid.immatriculationqueryside.services;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.axonframework.eventhandling.EventHandler;
-import org.sid.immatriculationqueryside.entities.Vehicule;
-import org.sid.immatriculationqueryside.repositories.ProprietaireRepository;
-import org.sid.immatriculationqueryside.repositories.VehiculeRepository;
+import org.sid.immatriculationqueryside.entities.Infraction;
+import org.sid.immatriculationqueryside.repositories.InfractionRepository;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -17,12 +16,12 @@ import javax.transaction.Transactional;
 public class EventHandlerService {
 
     private ProprietaireRepository proprietaireRepository;
-    private VehiculeRepository vehiculeRepository;
+    private InfractionRepository vehiculeRepository;
 
 
     @EventHandler
     public void hanlder(VehiculeCreatedEvent event){
-        Vehicule vehicule = new Vehicule(
+        Infraction vehicule = new Infraction(
                 event.getId(),
                 event.getMarque(),
                 event.getMatricule(),
@@ -36,7 +35,7 @@ public class EventHandlerService {
 
     @EventHandler
     public void hanlder(VehiculeUpdatedEvent event){
-        Vehicule vehicule = vehiculeRepository.findById(event.getId()).get();
+        Infraction vehicule = vehiculeRepository.findById(event.getId()).get();
         vehicule.setMarque( event.getMarque() );
         vehicule.setMatricule( event.getMatricule() );
         vehicule.setModele( event.getModele() );

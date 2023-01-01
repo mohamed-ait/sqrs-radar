@@ -3,15 +3,12 @@ package org.sid.immatriculationqueryside.services;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.axonframework.queryhandling.QueryHandler;
-import org.sid.immatriculationqueryside.entities.Proprietaire;
-import org.sid.immatriculationqueryside.entities.Vehicule;
-import org.sid.immatriculationqueryside.repositories.ProprietaireRepository;
-import org.sid.immatriculationqueryside.repositories.VehiculeRepository;
+import org.sid.immatriculationqueryside.entities.Infraction;
+import org.sid.immatriculationqueryside.repositories.InfractionRepository;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
@@ -20,7 +17,7 @@ import java.util.stream.Collectors;
 public class QueryHandlerService {
 
     private ProprietaireRepository proprietaireRepository;
-    private VehiculeRepository vehiculeRepository;
+    private InfractionRepository vehiculeRepository;
 
 
     @QueryHandler
@@ -29,13 +26,13 @@ public class QueryHandlerService {
     }
 
     @QueryHandler
-    public List<Vehicule> on(GetAllVehiculesQuery query){
-        List<Vehicule> list = vehiculeRepository.findAll();
+    public List<Infraction> on(GetAllVehiculesQuery query){
+        List<Infraction> list = vehiculeRepository.findAll();
         return list;
     }
 
     @QueryHandler
-    public Vehicule on(GetVehiculeById query){
+    public Infraction on(GetVehiculeById query){
         return vehiculeRepository.findById(query.getId()).get();
     }
 
