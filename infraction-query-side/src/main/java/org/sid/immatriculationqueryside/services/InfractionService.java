@@ -52,7 +52,7 @@ public class InfractionService {
         infractionRepository.deleteById(event.getId());
         log.info("Infraction deleted !");
     }
-''
+
     @QueryHandler
     public List<Infraction> on(GetAllInfractionsQuery event){// no business logic here !
         return infractionRepository.findAll();
